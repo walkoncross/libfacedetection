@@ -36,9 +36,11 @@ using namespace cv;
 
 int main(int argc, char* argv[])
 {
+	printf("\nThis application is to detect faces and landmarks in the input image!\n");
+	printf("Usage: %s <image_file_name>\n", argv[0]);
+
     if(argc != 2)
     {
-        printf("Usage: %s <image_file_name>\n", argv[0]);
         return -1;
     }
 

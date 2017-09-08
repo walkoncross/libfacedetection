@@ -39,10 +39,13 @@ using namespace cv;
 int main(int argc, char* argv[])
 {
     int total_count = 100;
+	printf("\nThis application is to benchmark the processing time of the FD engine,"
+		"by looping <test_loop_count> times in processing the input image!\n");
+
+	printf("Usage: %s <image_file_name> [<test_loop_count>=100]\n", argv[0]);
 
     if(argc < 2)
     {
-        printf("Usage: %s <image_file_name> [<test_loop_count>=100]\n", argv[0]);
         return -1;
     }
 	
