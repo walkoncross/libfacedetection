@@ -46,8 +46,8 @@ else()
 	include_directories(${OpenCV_INCLUDE_DIRS})
 	list(APPEND facedet_required_libs ${OpenCV_LIBS})
 	
-	add_executable(example libfacedetect-example.cpp)
-	target_link_libraries(example ${facedet_required_libs})
+	add_executable(fd_and_landmark libfacedetect-example.cpp)
+	target_link_libraries(fd_and_landmark ${facedet_required_libs})
 
 	add_executable(benchmark benchmark.cpp)
 	target_link_libraries(benchmark ${facedet_required_libs})
