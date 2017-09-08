@@ -51,5 +51,9 @@ else()
 
 	add_executable(benchmark benchmark.cpp)
 	target_link_libraries(benchmark ${facedet_required_libs})
+
+	add_executable(video_fd video_fd.cpp)
+	target_link_libraries(video_fd ${facedet_required_libs})
+
 endif()
 
