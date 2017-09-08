@@ -38,11 +38,21 @@ using namespace cv;
 
 int main(int argc, char* argv[])
 {
-    if(argc != 2)
+    int total_count = 100;
+
+    if(argc < 2)
     {
-        printf("Usage: %s <image_file_name>\n", argv[0]);
+        printf("Usage: %s <image_file_name> [<test_loop_count>=100]\n", argv[0]);
         return -1;
     }
+	
+	if (argc>2)
+	{
+		sscanf(argv[2], "%d", &total_count);
+	}
+	
+	printf("test_loop_count=%d", total_count);
+	
 	//load an image and convert it to gray (single-channel)
 	Mat gray = imread(argv[1], CV_LOAD_IMAGE_GRAYSCALE); 
 	if(gray.empty())
@@ -74,7 +84,6 @@ int main(int argc, char* argv[])
 	for(int i = 0; i < num_thread; i++)
         pBuffers[i] = p+(DETECT_BUFFER_SIZE)*i;
 
-    int total_count = 4096;
     double t;
 
     t = (double)cvGetTickCount();

@@ -96,8 +96,8 @@ int main(int argc, char* argv[])
 		}
 	}
 	imshow("Results_frontal", result_frontal);
-
-
+	imwrite("Results_frontal.jpg", result_frontal);
+	
 	///////////////////////////////////////////
 	// frontal face detection designed for video surveillance / 68 landmark detection
 	// it can detect faces with bad illumination.
@@ -128,6 +128,7 @@ int main(int argc, char* argv[])
 		}
 	}
 	imshow("Results_frontal_surveillance", result_frontal_surveillance);
+	imwrite("Results_frontal_surveillance.jpg", result_frontal_surveillance);
 
 
 	///////////////////////////////////////////
@@ -161,6 +162,7 @@ int main(int argc, char* argv[])
 		}
 	}
 	imshow("Results_multiview", result_multiview);
+	imwrite("Results_multiview.jpg", result_multiview);
 
 
 	///////////////////////////////////////////
@@ -194,6 +196,7 @@ int main(int argc, char* argv[])
 		}
 	}
 	imshow("Results_multiview_reinforce", result_multiview_reinforce);
+	imwrite("Results_multiview_reinforce.jpg", result_multiview_reinforce);
 	waitKey();
 
     //release the buffer
