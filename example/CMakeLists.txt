@@ -49,6 +49,9 @@ else()
 	add_executable(fd_and_landmark libfacedetect-example.cpp)
 	target_link_libraries(fd_and_landmark ${facedet_required_libs})
 
+	add_executable(fd_for_image_list fd_for_image_list.cpp)
+	target_link_libraries(fd_for_image_list ${facedet_required_libs})
+
 	add_executable(benchmark benchmark.cpp)
 	target_link_libraries(benchmark ${facedet_required_libs})
 
